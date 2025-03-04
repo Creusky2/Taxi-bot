@@ -3,7 +3,14 @@ from datetime import datetime, timedelta
 
 DISCORD_CHANNEL_FACTURES = 1218274316291018772
 DISCORD_CHANNEL_MISSIONS = 1218274512248901714
-DISCORD_TOKEN = "MTM0MzUxNjIxMDQ2NTIxNDQ5NA.GEOogw.PesFtgY7-pysXG9tnA9P-IVszeBUYULQLRFAYo"
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Charge les variables d'environnement
+
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
 
 PARIS_TZ = pytz.timezone("Europe/Paris")
 
